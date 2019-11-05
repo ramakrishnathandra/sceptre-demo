@@ -1,0 +1,17 @@
+#template_path: ecs_cluster.py
+template_path: ecs_template.yaml
+
+parameters:
+  DesiredCapacity: "1"
+  InstanceType: "t2.micro"
+  KeyName: "hackathon-sceptre"
+  MaxSize: "1"
+  SubnetId: "subnet-6a306233,subnet-d49d76e9"
+  VpcId: "vpc-1e36c17a"
+
+hooks:
+    before_update:
+        - !cmd "echo 'before update'"
+    after_update:
+        - !cmd "echo Environment yaml after_update calling custom hook"
+        - !cmd "blue_green_flip.py"
