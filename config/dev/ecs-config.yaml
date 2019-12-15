@@ -15,3 +15,7 @@ hooks:
     after_update:
         - !cmd "echo Environment yaml after_update calling custom hook"
         - !cmd "blue_green_flip.py"
+sadasdasfadsfdsfdsfsdfsd
+sdafdsfldsglsdlgsdglds
+sffdslfksdlgkdskgdskgsd
+mlfdslfksdlkfs
